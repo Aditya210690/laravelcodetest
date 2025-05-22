@@ -19,6 +19,6 @@ use App\Http\Controllers\SearchController;
 // });
 
 
-Route::get('/', [SearchController::class, 'index'])->name('search.index');
-Route::post('/search', [SearchController::class, 'search'])->name('search.perform');
-Route::get('/export', [SearchController::class, 'export'])->name('search.export');
+Route::get('/', [SearchController::class, 'index']);
+Route::post('/search', [SearchController::class, 'search'])->name('search.results');
+Route::get('/export-csv', [SearchController::class, 'export'])->name('search.export');
